@@ -1,0 +1,275 @@
+:root{
+--Soft-orange: hsl(35, 77%, 62%);
+--Soft-red: hsl(5, 85%, 63%);
+--Off-white: hsl(36, 100%, 99%);
+--Grayish-blue: hsl(233, 8%, 79%);
+--Dark-grayish-blue: hsl(236, 13%, 42%);
+--Very-dark-blue: hsl(240, 100%, 5%);
+}
+
+@font-face {
+    font-family: inter;
+    src: url(./assets/fonts/Inter-VariableFont_slnt\,wght.ttf);
+    font-weight: 400;
+}
+@font-face {
+    font-family: inter;
+    src: url(./assets/fonts/Inter-VariableFont_slnt\,wght.ttf);
+    font-weight: 700;
+}
+@font-face {
+    font-family: inter;
+    src: url(./assets/fonts/Inter-VariableFont_slnt\,wght.ttf);
+    font-weight: 800;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-size: 15px;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    font-family: inter, sans-serif;
+}
+
+.container{
+    width: 1100px;
+    padding: 70px;
+}
+
+.nav-bar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+}
+
+.nav-bar .controls{
+    display: flex;
+    gap: 20px;
+    justify-content: flex-end;
+    
+}
+
+.menu-icon{
+    display: none;
+}
+
+.close-icon{
+    display: none;
+}
+
+.controls button{
+    border: none;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.controls button:hover{
+    color: var(--Soft-red);
+}
+
+.toggle{
+    display: none;
+}
+
+.content{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.future{
+    grid-column: span 2;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+}
+
+.future img{
+    width: 100%;
+}
+
+.future-content{
+    display: flex;
+    /* flex-basis: 0; */
+}
+
+.future-content div{
+    /* padding: 10px 0; */
+    width: 50%;
+}
+.future-title{
+    padding-right: 40px;
+}
+
+.future-content button{
+    background-color: var(--Soft-red);
+    outline: none;
+    border: none;
+    padding: 10px;
+    width: 50%;
+    margin-top: 10px;
+    color: var(--Off-white);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+
+}
+
+.future h1{
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--Very-dark-blue);
+}
+.future p{
+    color: var(--Dark-grayish-blue);
+}
+
+.new{
+    background-color: var(--Very-dark-blue);
+    padding: 20px;
+}
+
+.new h1{
+    color: var(--Soft-orange);
+    font-size: 2rem;
+    font-weight: 700;
+    padding: 10px 0;
+}
+
+.new .new-content{
+    display: flex;
+    flex-direction: column;
+}
+
+.new-content h2{
+    color: var(--Off-white);
+    font-size: 17px;
+    margin-bottom: 10px;
+}
+
+.new-content p{
+    color: var(--Dark-grayish-blue);
+    line-height: 2;
+}
+
+.new-content div{
+    padding: 10px 0;
+    border-bottom: 1px solid var(--Off-white);
+
+}
+
+.new-content div:last-child{
+    border-bottom: none;
+}
+
+.card{
+    display: flex;
+    gap: 10px;
+}
+
+.card img{
+    height: 150px;
+}
+
+.card-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card h1{
+    font-size: 2rem;
+    color: var(--Dark-grayish-blue);
+    font-weight: 700;
+}
+
+.card h2{
+    font-size: 18px;
+    color: var(--Very-dark-blue);
+}
+
+.card p{
+    line-height: 2;
+    color: var(--Dark-grayish-blue);
+}
+
+
+
+
+@media (max-width: 600px){
+
+    *{
+        font-size: 13px;
+    }
+
+    .container{
+        padding: 20px 0;
+        margin: 0 10px;
+        box-sizing: border-box;
+    }
+
+    .nav-bar .controls{
+        flex-direction: column;
+        position: fixed;
+        background-color: var(--Off-white);
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: 70%;
+        box-sizing: border-box;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding: 10%;
+        z-index: 222;
+        transform: translateX(100%);
+        transition: .5s;
+    }
+
+    .nav-bar button{
+        font-size: 1.2rem;
+        color: var(--Very-dark-blue);
+
+    }
+
+    .menu-icon{
+        display: block;
+        cursor: pointer;
+    }
+
+    .close-icon{
+        display: inline-block;
+        margin-left: 80%;
+        cursor: pointer;
+    }
+
+    .close-icon img{
+        width: 25px;
+    }
+
+
+    .content{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .future-content{
+        flex-direction: column;
+    }
+
+    .future-content div{
+        width: 100%;
+        margin: 0px 0;
+    }
+}
+
+
+
+
+
+
